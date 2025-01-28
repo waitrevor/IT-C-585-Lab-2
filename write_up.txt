@@ -1,0 +1,7 @@
+1. If you encrypt the same input data twice it produces the same ciphertext. The output is the same because the key that you are using to encrypt is hard coded.
+
+2. The code raised a ValueError saying that "The length of the provided data is not a multiple of the block length." The 16 bytes are important because 16 bytes are 128 bits and AES uses 128 bit block sizes for the input.
+
+3. The code raised a ValueError saying that "Invalid key size (280) for AES." The 32 bytes are important because AES uses key sizes of 128, 196, or 256 bits and 32 bytes is 265 bits. If the key size is larger than 32 bytes and less than 48 bytes then it isn't in the correct key size for AES.
+
+4. 
